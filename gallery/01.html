@@ -22,6 +22,11 @@
 </ul>
 <img id="placeholder" src="images/placeholder.gif" alt="my image gallery"/>
 <script>
+    function showPic(whichpic){
+        var source=whichpic.getAttribute("href");
+        var placeholder=document.getElementById("placeholder");
         placeholder.setAttribute("src",source);
+    }
+</script>
 </body>
 </html>
