@@ -8,25 +8,19 @@
 <h1>Snapshots</h1>
 <ul>
     <li>
-        <a href="images/coffee.jpg" title="A fireworks display">Firework</a>
+        <a href="images/coffee.jpg" onclick="showPic(this);return false;" title="A fireworks display">Firework</a>
     </li>
     <li>
-        <a href="images/coffee.jpg" title="A cup of black coffe">Coffe</a>
+        <a href="images/coffee.jpg" onclick="showPic(this);return false;"title="A cup of black coffe">Coffe</a>
     </li>
     <li>
-        <a href="images/rose.jpg" title="A red ,red rose">rose</a>
+        <a href="images/rose.jpg" onclick="showPic(this);return false;"title="A red ,red rose">rose</a>
     </li>
     <li>
-        <a href="images/bigben.jpg" title="The famous clock">Big Ben</a>
+        <a href="images/bigben.jpg" onclick="showPic(this);return false;"title="The famous clock">Big Ben</a>
     </li>
 </ul>
 <img id="placeholder" src="images/placeholder.gif" alt="my image gallery"/>
-<script>
-    function showPic(whichpic){
-        var source=whichpic.getAttribute("href");
-        var placeholder=document.getElementById("placeholder");
-        placeholder.setAttribute("src",source);
-    }
-</script>
+<script type="text/javascript" src="js/showPic.js"></script>
 </body>
 </html>
