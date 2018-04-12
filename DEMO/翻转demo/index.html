@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+
+
+        .flip-container {
+            perspective: 1000;
+            height: 500px;
+        }
+
+
+        .flip-container:hover .flipper,
+        .flip-container.hover .flipper {
+            transform: rotateY(180deg);
+        }
+
+        .flip-container,
+        .front,
+        .back {
+            width: 150px;
+            height: 180px;
+        }
+
+
+        .flipper {
+            transition: 0.6s;
+            transform-style: preserve-3d;
+
+            position: relative;
+        }
+
+
+        .front,
+        .back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* 前 */
+        .front {
+            z-index: 2;
+            background: url('./img/pic_eight.png') no-repeat left center;
+            background-size: cover;
+
+        }
+
+        /* 后 */
+        .back {
+            transform: rotateY(180deg);
+            background: url('./img/pic_eight.png') no-repeat left center;
+            background-size: cover;
+        }
+
+        .front,
+        .back {
+            color: #fff;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            width: 150px;
+            margin: 10px;
+        }
+
+        .content {
+            margin: 0 auto;
+        }
+
+        .firstul {
+            margin-left: 84px;
+        }
+
+        .lastul {
+            margin-top: -70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <ul class="firstul">
+            <li>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <!-- 前面内容 -->
+                            标题
+                        </div>
+                        <div class="back">
+                            <!-- 背面内容 -->
+                            内容
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <!-- 前面内容 -->
+                            正面标题
+                        </div>
+                        <div class="back">
+                            <!-- 背面内容 -->
+                            背面的内容
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <!-- 前面内容 -->
+                            标题
+                        </div>
+                        <div class="back">
+                            <!-- 背面内容 -->
+                            内容
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="lastul">
+            <li>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <!-- 前面内容 -->
+                            正面标题
+                        </div>
+                        <div class="back">
+                            <!-- 背面内容 -->
+                            背面的内容
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <!-- 前面内容 -->
+                            正面标题
+                        </div>
+                        <div class="back">
+                            <!-- 背面内容 -->
+                            背面的内容
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <!-- 前面内容 -->
+                            正面标题
+                        </div>
+                        <div class="back">
+                            <!-- 背面内容 -->
+                            背面的内容
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <!-- 前面内容 -->
+                            正面标题
+                        </div>
+                        <div class="back">
+                            <!-- 背面内容 -->
+                            背面的内容
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
