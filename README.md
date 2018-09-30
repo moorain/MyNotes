@@ -1,3 +1,2 @@
-# MyDemo
-moorain
-一些demo记录，方便以后记录
+# MyNotes
+一些记录
