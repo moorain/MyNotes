@@ -1,2 +1,3 @@
 # MyNotes
-一些记录
+
+好记性不如github
