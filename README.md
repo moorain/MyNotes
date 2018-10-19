@@ -8,7 +8,7 @@
  ## JS
   1. [排序](https://github.com/moorain/MyNotes/blob/master/DEMO/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.js) 
   2. [正则](https://github.com/moorain/MyNotes/blob/master/DEMO/%E6%AD%A3%E5%88%99.js) 
-  3. [数组去重](https://github.com/moorain/MyNotes/blob/master/DEMO/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D.js) 
+  3. [数组](https://github.com/moorain/MyNotes/blob/master/DEMO/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D.js) 
 
 
  ## Other
