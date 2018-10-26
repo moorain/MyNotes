@@ -14,4 +14,5 @@
  ## Other
 
   1. [一个精确计算的JS库]( https://github.com/nefe/number-precision/blob/master/src/index.ts) 
+  2. [react-datasheet]( https://github.com/moorain/react-datasheet) 
 
