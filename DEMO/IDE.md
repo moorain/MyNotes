@@ -35,6 +35,9 @@ https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snipp
 
 GitLens supercharges the Git capabilities built into Visual Studio Code
 
+### Settings Sync
+配置同步到github
+
 ### WakaTime
 Metrics, insights, and time tracking automatically generated from your programming activity.
 统计运行vscode时间
@@ -45,6 +48,8 @@ Visual Studio Code plugin that autocompletes filenames.
 ### Bracket Pair Colorizer 
 让括号拥有独立的颜色
 
+
+  
 ## 主题
 
 ### Dracula Official
