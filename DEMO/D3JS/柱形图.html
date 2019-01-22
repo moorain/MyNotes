@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3</title>
+  <script src='./d3.js'></script>
+  <style>
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: black;
+      shape-rendering: crispEdges;
+    }
+
+    .axis text {
+      font-family: sans-serif;
+      font-size: 11px;
+    }
+
+    .rects {
+      fill: #999;
+    }
+
+    .Mytexts {
+      fill: yellow;
+      text-anchor: middle;
+      stroke-width: 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+      const data = [
+      { name: 'a', value: 80 },
+      { name: 'b', value: 40 },
+      { name: 'c', value: 20 },
+      { name: 'd', value: 30 },
+      { name: 'e', value: 80 },
+      { name: 'f', value: 40 },
+      { name: 'g', value: 90 },
+    ]
+    const body = d3.select('body');
+    const width = 400;
+    const height = 400;
+    const svg = body.append('svg')
+      .attr('width', width)
+      .attr('height', height)
+
+    // 1.比例尺 --线性比例尺
+    // const linear = d3.scaleLinear()
+    //   .domain([0, 100])
+    //   .range([0, 300]);
+    // // console.log(linear(100))
+    // const ordinal = d3.scaleOrdinal()//序数比例尺
+    //   .domain([0, 1, 2, 3, 4, 5, 6])
+    //   .range([10, 11, 12, 123, 123, 3, 100])
+    // // console.log(ordinal(1))
+
+    // 2，坐标轴
+    // x
+    const xScale = d3.scaleBand()//序数比例尺
+      .domain([0, 1, 2, 3, 4, 5, 6])
+      .rangeRound([0, 300])
+    const xAxis = d3.axisBottom(xScale)
+
+    const gxAxis = svg.append('g')
+      .attr('class', 'axis')
+      .attr('transform', 'translate(30,300)')//平移
+      .call(xAxis)
+     
+
+    // y
+    const yScale = d3.scaleLinear()//线性比例尺
+      .domain([100, 0])
+      .range([0, 250]);
+    const yAxis = d3.axisLeft(yScale);//创建坐标轴生成器
+    const gyAxis = svg.append('g')
+      .attr('class', 'axis')
+      .attr('transform', 'translate(30,50)')
+      .call(yAxis)
+
+    //call调用一次指定的 function，并为将当前选择集作为第一个参数，此外还可以使用可选的其他参数。返回选择集，等价于手动调用函数，但是这种方法支持链式调用，等于yAxis(gyAxis);
+    yScale.domain([0, 100])
+    // console.log(yScale(80))
+    //柱形图
+  
+    //添加矩形
+    const rects = svg.selectAll('.sects')
+      .data(data, (a) => a.value)
+      .enter()
+      .append('rect')
+      .attr('class', 'rects')
+      .attr('transform', 'translate(30,50)')//平移
+      .attr('x', (a, i) => {
+        return xScale(i)
+      })//矩形的x坐标
+      .attr('y', (a, i) => {//矩形的y坐标
+        return height - yScale(a.value) - 50 - 100;
+      })
+      .attr('width', () => xScale.bandwidth() - 4)//bandwidth比例尺分块的宽度
+      .attr('height', (d) => yScale(d.value))
+
+    // 文字
+    var text = svg.selectAll('.Mytexts')
+      .data(data)
+      .enter()
+      .append('text')
+      .attr('class', 'Mytexts')
+      .attr('x', (a, i) => {
+        return xScale(i)
+      })//矩形的x坐标
+      .attr('y', (a, i) => { //矩形的y坐标
+        return height - 2 * yScale(a.value) - 40 - 100;
+      })
+      .attr('transform', 'translate(30,60)')//平移
+      .text((d) => d.value)
+      .attr('fill', 'red')
+      .attr('dx', () => xScale.bandwidth() / 2)//bandwidth比例尺分块的宽度
+      .attr('dy', (d) => yScale(d.value))
+  </script>
+</body>
+
+</html>
