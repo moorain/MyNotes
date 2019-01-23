@@ -16,8 +16,12 @@
 
   1. [一个精确计算的JS库]( https://github.com/nefe/number-precision/blob/master/src/index.ts) 
   2. [React-Datasheet]( https://github.com/moorain/react-datasheet) 
+  `在线的类似excel表格库`
   2. [VSCODE]( https://github.com/moorain/MyNotes/blob/master/DEMO/IDE.md)
+   `个人的IDE配置`
   3. [Learn Git Branching](https://github.com/pcottle/learnGitBranching)
+  `学习，理解git操作的有趣的网站`
+  
   3. [mapshaper](https://github.com/giscafer/mapshaper-plus) 
    `将多种数据格式（Shapefile, GeoJSON, TopoJSON 和 Zip files）导入后，对地图的编辑和导出（Shapefile, GeoJSON, TopoJSON, DSV, SVG）`
   
