@@ -18,3 +18,6 @@
   2. [React-Datasheet]( https://github.com/moorain/react-datasheet) 
   2. [VSCODE]( https://github.com/moorain/MyNotes/blob/master/DEMO/IDE.md)
   3. [Learn Git Branching](https://github.com/pcottle/learnGitBranching)
+  3. [mapshaper](https://github.com/giscafer/mapshaper-plus) 
+   `将多种数据格式（Shapefile, GeoJSON, TopoJSON 和 Zip files）导入后，对地图的编辑和导出（Shapefile, GeoJSON, TopoJSON, DSV, SVG）`
+  
