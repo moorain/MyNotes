@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>moorain</title>
+  <style>
+ .dotting { display: inline-block; width: 10px; min-height: 2px;
+            padding-right: 2px;
+            border-left: 2px solid currentColor; border-right: 2px solid currentColor;
+            background-color: currentColor; background-clip: content-box;
+            box-sizing: border-box;
+            -webkit-animation: dot 1.5s infinite step-start both;
+            animation: dot 1.5s infinite step-start both;
+            *zoom: expression(this.innerHTML = '...');  /*IE7 */
+        }
+        .dotting:before { content: '...'; } /* IE8 */
+        .dotting::before { content: ''; }
+        :root .dotting { margin-left: 2px; padding-left: 2px; } /* IE9+ */
+
+        @-o-keyframes dot {
+            25% { border-color: transparent; background-color: transparent; }
+            50% { border-right-color: transparent; background-color: transparent; }
+            75% { border-right-color: transparent; }
+        }
+        @-ms-keyframes dot {
+            25% { border-color: transparent; background-color: transparent; }
+            50% { border-right-color: transparent; background-color: transparent; }
+            75% { border-right-color: transparent; }
+        }
+        @-moz-keyframes dot {
+            25% { border-color: transparent; background-color: transparent; }
+            50% { border-right-color: transparent; background-color: transparent; }
+            75% { border-right-color: transparent; }
+        }
+        @-webkit-keyframes dot {
+            25% { border-color: transparent; background-color: transparent; }
+            50% { border-right-color: transparent; background-color: transparent; }
+            75% { border-right-color: transparent; }
+        }
+        @keyframes dot {
+            25% { border-color: transparent; background-color: transparent; }
+            50% { border-right-color: transparent; background-color: transparent; }
+            75% { border-right-color: transparent; }
+        }
+  </style>
+</head>
+
+<body>
+<a href="javascript:" class="login">登录中<span class="dotting"></span></a>
+</body>
+</html>
