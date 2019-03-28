@@ -32,3 +32,5 @@
   3. [mapshaper](https://github.com/giscafer/mapshaper-plus) 
    `将多种数据格式（Shapefile, GeoJSON, TopoJSON 和 Zip files）导入后，对地图的编辑和导出（Shapefile, GeoJSON, TopoJSON, DSV, SVG）`
   
+  4. [计算机科学速成课](https://www.bilibili.com/video/av21376839?from=search&seid=8692760528805485639)
+  `YouTube搬运的有趣的计算机科学的课程`
