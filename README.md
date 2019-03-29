@@ -34,3 +34,7 @@
   
   4. [计算机科学速成课](https://www.bilibili.com/video/av21376839?from=search&seid=8692760528805485639)
   `YouTube搬运的有趣的计算机科学的课程`
+  
+  4. [chocolatey]( https://chocolatey.org/)
+  `windows上包管理工具`
+ 
