@@ -4,9 +4,9 @@ interface IProps {
   text: string
 }
 
-export default function (props: IProps) {
-  console.log(props, 'props')
+export default function ({ children }: IProps) {
   return (
-    <div>22ddd</div>
+    <div>{children}
+    </div>
   )
 };

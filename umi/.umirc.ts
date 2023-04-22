@@ -25,7 +25,8 @@ export default defineConfig({
       path: '/rain',
       component: '@/layout/index',
       routes: [
-        { path: '/table', component: '@/pages/Table' }
+        { path: '/table', component: '@/pages/Table' },
+        // { path: '/x6', component: '@/pages/x6' },
       ]
     }
   ],
