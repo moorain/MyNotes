@@ -4,6 +4,9 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  history: {
+    type: 'hash'
+  },
   routes: [
     // {
     //   path: '/', component: '@/pages/index',
@@ -13,8 +16,18 @@ export default defineConfig({
     //     { path: 'page3', component: '@/pages/Page3' },
     //   ],
     // },
-    { path: '/x6', component: '@/pages/x6' },
-    { path: '/table', component: '@/pages/Table' },
+    // { path: '/x6', component: '@/pages/x6' },
+    // { path: '/table', component: '@/pages/Table' },
+    {
+      path: '/', redirect: '/rain/table',
+    },
+    {
+      path: '/rain',
+      component: '@/layout/index',
+      routes: [
+        { path: '/table', component: '@/pages/Table' }
+      ]
+    }
   ],
   fastRefresh: {},
 });
