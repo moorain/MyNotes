@@ -26,6 +26,7 @@ export default defineConfig({
       component: '@/layout/index',
       routes: [
         { path: '/table', component: '@/pages/Table' },
+        { path: '/flow', component: '@/pages/flow' },
         // { path: '/x6', component: '@/pages/x6' },
       ]
     }
