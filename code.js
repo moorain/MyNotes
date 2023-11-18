@@ -35,3 +35,63 @@ const func = (arr, num = 9) => {
         }
         return result;
       };
+
+
+// 3.并发任务控制
+ function timeout(time) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve()
+        }, time)
+      })
+    }
+
+    class SuperTask {
+      constructor() {
+        this.tasks = [];
+        this.runningTasks = 0;
+        this.maxConcurrentTasks = 2;
+      }
+
+      _executeNextTask() {
+        if (this.runningTasks < this.maxConcurrentTasks && this.tasks.length > 0) {
+          const currentTask = this.tasks.shift();
+          this.runningTasks++;
+          currentTask();
+        }
+      }
+
+      add(task) {
+        return new Promise((resolve, reject) => {
+          const taskWrapper = () => {
+            task()
+              .then((result) => resolve(result))
+              .catch((error) => reject(error))
+              .finally(() => {
+                this.runningTasks--;
+                this._executeNextTask();
+              });
+          };
+
+          this.tasks.push(taskWrapper);
+          this._executeNextTask();
+        });
+      }
+    }
+
+    const superTask = new SuperTask();
+
+    function addTask(time, name) {
+      superTask.add(() => timeout(time)).then(() => {
+        console.log(`任务${name}完成！`)
+      })
+    }
+
+
+    addTask(1000, 1)
+    addTask(2000, 2)
+    addTask(3000, 3)
+    addTask(1000, 4)
+    addTask(2000, 5)
+
+    //1 -2 - 4 -3 -5
